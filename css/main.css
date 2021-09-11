@@ -47,4 +47,53 @@ ul {
 .logo {
     font-weight: 700;
     font-size: 40px;
+@import "https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css";
+
+.navbar {
+  background: white;
+  padding: 1em;
+}
+
+.navbar ul {
+  width: auto;
+  float: left;
+}
+
+.navbar li {
+  display: inline-block;
+  padding-right: 30px;
+}
+
+.navbar .current {
+  font-weight: bold;
+}
+
+.navbar .logo {
+  text-decoration: none;
+  font-weight: bold;
+  color: black;
+  font-size: 1.2em;
+}
+
+.navbar .logo span {
+  color: var(--primary-color);
+}
+
+.primary-nav .academics:hover {
+  font-weight: bold;
+}
+
+.primary-nav .experiences:hover {
+  font-weight: bold;
+}
+
+.navbar .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  place-content: space-between;
+}
+
+.navbar .mobile-menu {
+  cursor: pointer;
 }
