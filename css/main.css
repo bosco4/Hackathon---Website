@@ -1,1 +1,50 @@
-@import "https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css";
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap');
+
+.background{
+
+    background-color: #F7F8FC;
+}
+
+
+body {
+    box-sizing: border-box;
+    width: 100%;
+    margin: auto;
+    font-family: Poppins, sans-serif;
+    font-weight: 500;
+}
+
+
+
+li a {
+    padding: 10px;
+    text-decoration: none;
+}
+
+.navbar{
+    list-style: none;
+}
+
+.navbar li {
+    display: inline-block;
+}
+
+ul {
+    list-style-type: none;
+    color: #1f1f1f;
+}
+
+.right-nav {
+    float: right;
+    display: flex;
+    justify-content: space-between;
+    padding-right: 10px;
+    margin-top: 1rem;
+    
+}
+
+.logo {
+    font-weight: 700;
+    font-size: 40px;
+}
