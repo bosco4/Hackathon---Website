@@ -108,7 +108,8 @@
               <option value="Female">Female</option>
             </select>
 
-            <br>
+            </br>
+
             <label for="activityRate">Daily exercise: </label>
             <select name="activityR" id="activityRate" style="width: 21%; height: 1cm;">
               <option value="1.2">Little to No Activity</option>
@@ -117,7 +118,6 @@
               <option value="1.725">6-7 Days per week</option>
               <option value="1.9">Hard Activity 6-7 Days per week</option>
             </select>
-          </br>
 
             <!---
               Source: Muhanad Hasan; youtube.com/channel/UC1xxTfHbYIFLzjqUIQbA7iQ
@@ -152,11 +152,9 @@
                   BMR = genderModifier + (weightModifier * weightLbs.value * 0.453592) + (heightModifier * ( (heightFt.value * 30.48) + (heightIn.value * 2.54) ) ) - (ageModifier * ageInt.value)
                   result = "Min. Cal: " + Math.round(BMR * activityRate.value);
                 }
-                
                 document.getElementById("message").innerHTML = result;
               }
             </script>
-            </br>
           </form>
 
         </div>
