@@ -6,7 +6,7 @@ from .models import Question
 def index(request):
     latest_question_list = Question.objects.order_by('-pub_date')[:5]
     context = {'latest_question_list': latest_question_list}
-    return render(request, 'polls/index.html', context)
+    return render(request, 'polls/index_j.html', context)
 
 
 def details(request, question_id):
@@ -25,3 +25,11 @@ def vote(request, question_id):
 
 def game_breath(request, *a):
     return render(request, 'polls/game_breath.html', None)
+
+
+def questionnaire(request, *a):
+    return render(request, 'polls/questionnaire.html', None)
+
+
+def physical_health(request, *a):
+    return render(request, 'polls/physical_health.html', None)

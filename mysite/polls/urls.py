@@ -16,4 +16,8 @@ urlpatterns = [
 
     path('game_breath/', views.game_breath, name='game_breath'),
 
+    path('questionnaire/', views.questionnaire, name='questionnaire'),
+
+    path('physical_health/', views.physical_health, name='physical_health'),
+
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
