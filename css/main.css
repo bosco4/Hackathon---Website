@@ -53,6 +53,7 @@ ul {
 .logo {
   font-weight: 700;
   font-size: 40px;
+  color: var(--secondary-color);
 }
 
 .hero {
@@ -87,11 +88,16 @@ ul {
 nav {
   -webkit-backdrop-filter: blur(8px);
   backdrop-filter: blur(8px);
-  /* position: fixed;
+}
+/* position: fixed;
+/* nav {
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
+    /* position: fixed;
     top: 0;
     left: 0;
-    right: 0; */
-}
+    right: 0;
+} */
 
 /* ADDING TOGGLE FOR DARK MODE */
 
