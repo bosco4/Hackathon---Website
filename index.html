@@ -151,9 +151,8 @@
                 if(weightLbs.value && heightFt.value && heightIn.value && ageInt.value){
                   BMR = genderModifier + (weightModifier * weightLbs.value * 0.453592) + (heightModifier * ( (heightFt.value * 30.48) + (heightIn.value * 2.54) ) ) - (ageModifier * ageInt.value)
                   result = "Min. Cal: " + Math.round(BMR * activityRate.value);
-                }else{
-
                 }
+                
                 document.getElementById("message").innerHTML = result;
               }
             </script>
