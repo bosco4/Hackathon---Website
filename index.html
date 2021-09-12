@@ -108,6 +108,7 @@
               <option value="Female">Female</option>
             </select>
 
+            <br>
             <label for="activityRate">Daily exercise: </label>
             <select name="activityR" id="activityRate" style="width: 21%; height: 1cm;">
               <option value="1.2">Little to No Activity</option>
@@ -116,15 +117,13 @@
               <option value="1.725">6-7 Days per week</option>
               <option value="1.9">Hard Activity 6-7 Days per week</option>
             </select>
-
-            </br>
+          </br>
 
             <!---
               Source: Muhanad Hasan; youtube.com/channel/UC1xxTfHbYIFLzjqUIQbA7iQ
               Code: youtube.com/watch?v=20wxkO2gL78
               --->
             <input type="button" value="Evaluate" onclick="calCalories()">
-          
             <script>
               function calCalories()
               {
@@ -152,6 +151,7 @@
                 document.getElementById("message").innerHTML = "Min. Cal: " + Math.round(BMR * activityRate.value);
               }
             </script>
+            </br>
           </form>
 
         </div>
