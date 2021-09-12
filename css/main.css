@@ -1,99 +1,93 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap");
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap');
-
-.background{
-
-    background-color: #F7F8FC;
+.background {
+  background-color: #f7f8fc;
 }
-
 
 body {
-    box-sizing: border-box;
-    width: 100%;
-    margin: auto;
-    font-family: Poppins, sans-serif;
-    font-weight: 500;
+  box-sizing: border-box;
+  width: 100%;
+  margin: auto;
+  font-family: Poppins, sans-serif;
+  font-weight: 500;
 }
-
-
 
 li a {
-    padding: 10px;
-    text-decoration: none;
+  padding: 10px;
+  text-decoration: none;
 }
-
-.navbar{
-    list-style: none;
-}
-
-.navbar li {
-    display: inline-block;
-}
-
-ul {
-    list-style-type: none;
-    color: #1f1f1f;
-}
-
-.right-nav {
-    float: right;
-    display: flex;
-    justify-content: space-between;
-    padding-right: 10px;
-    margin-top: 1rem;
-    
-}
-
-.logo {
-    font-weight: 700;
-    font-size: 40px;
-@import "https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css";
 
 .navbar {
-  background: white;
-  padding: 1em;
-}
-
-.navbar ul {
-  width: auto;
-  float: left;
+  list-style: none;
 }
 
 .navbar li {
   display: inline-block;
-  padding-right: 30px;
 }
 
-.navbar .current {
-  font-weight: bold;
+ul {
+  list-style-type: none;
+  color: #1f1f1f;
 }
 
-.navbar .logo {
-  text-decoration: none;
-  font-weight: bold;
-  color: black;
-  font-size: 1.2em;
-}
-
-.navbar .logo span {
-  color: var(--primary-color);
-}
-
-.primary-nav .academics:hover {
-  font-weight: bold;
-}
-
-.primary-nav .experiences:hover {
-  font-weight: bold;
-}
-
-.navbar .container {
-  display: -webkit-box;
-  display: -ms-flexbox;
+.right-nav {
+  float: right;
   display: flex;
-  place-content: space-between;
+  justify-content: space-between;
+  padding-right: 10px;
+  margin-top: 1rem;
 }
 
-.navbar .mobile-menu {
-  cursor: pointer;
+.logo {
+  font-weight: 700;
+  font-size: 40px;
+}
+
+.TF h2 {
+  padding-left: 1em;
+}
+.TF h3 {
+  /* float: left; */
+  padding-left: 2em;
+}
+
+.TF h4 {
+  padding-left: 3em;
+  display: none;
+  color: gray;
+}
+
+.TF ul {
+  padding-left: 4em;
+  display: none;
+  color: gray;
+}
+
+.TF il li {
+  padding-left: 5em;
+  display: none;
+  color: gray;
+}
+
+.TF a {
+  padding-left: 2.5em;
+}
+
+#myBtn {
+  /* position: fixed; */
+  /* display: inline-block; */
+  float: right;
+  height: auto;
+
+  z-index: 99; /* Make sure it does not overlap */
+  border: none; /* Remove borders */
+  outline: none; /* Remove outline */
+  background-color: orange; /* Set a background color */
+  color: white; /* Text color */
+  cursor: pointer; /* Add a mouse pointer on hover */
+  padding: 15px; /* Some padding */
+  border-radius: 10px; /* Rounded corners */
+  font-size: 10px; /* Increase font size */
+  margin-right: 5em;
+  text-align: center;
 }

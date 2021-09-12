@@ -22,7 +22,7 @@
       </ul>
       </nav>
     </header>
-    <section class="hero">
+    <!-- <section class="hero">
         <div class="hero-body">
           <p class="title">
             Hero title
@@ -31,6 +31,129 @@
             Hero subtitle
           </p>
         </div>
-      </section>
+      </section> -->
+
+    <!-- true and false part -->
+    <section class="TF">
+        
+        <h2>Stress and Mental Health Q&A:</h2>
+        <br>
+        <h2>Mental Health Facts</h2>
+        <h3>Q: "Are all stress bad?"</h3>
+        <h4 class="answer">A: Definitely not, we need stress to sign our bodies to prepare threats, but we will reach burnout if we are constantly in stress for a long time.</h4>
+
+        <h3>Q: "Stress has no effect on our health, right?"</h3>
+        <h4 class="answer">A: False! chronic stress can be potentially harmful to our health.</h4>
+
+        <h3>Q: "What is chronic stress?"</h3>
+        <h4 class="answer">A: Chronic stress occus when our bodies are used to stress overtime which we can't receive a clear signal to return back to normal. </h4>
+
+        <h3>Q: "What are the symptoms of stress?"</h3>
+        <h4 class="answer">A: Chronic stress affect all aspects of our lives, including our emotions, behaviors, cognitvity, and physical health.</h4>
+        <ul class="answer">
+            Emotioal symptoms include:
+            <li>- Become easily frustrated, agitated</li>
+            <li>- Feel overwhelmed</li>
+            <li>- Feel difficult to relax yourself</li>
+            <li>- Feel depressed (low self-esteem)</li>
+            <li>- Avoid interact with others</li>
+            <br>
+            Behavioral symptoms include:
+            <li>- Change in appetite</li>
+            <li>- Procastinate and avoiding responsibilities</li>
+            <li>- Increase substanse use (ex. drug, alcohol)</li>
+            <br>
+            Cognitive symptoms include:
+            <li>- Constantly worryig</li>
+            <li>- Racing </li>
+            <li>- Forgetfulness and disorganization</li>
+            <li>- Inability to focus</li>
+            <li>- Being pessimistic</li>
+            <br>
+            Physical symptoms include:
+            <li>- Low energy</li>
+            <li>- Headaches</li>
+            <li>- Aches, pains and tense muscles</li>
+            <li>- Rapid heartbeat</li>
+            <li>- Insomnia</li>
+            <li>- Constantly in the state of nervousness</li>
+            <li>- Loss sexual desire and/ or ability</li>
+        </ul>
+
+
+        <h3>Q: "Oh my goodness I am stressed out, How can I manage my stress?"</h3>
+        <h4 class="answer">A: Don't worry, you can still change it! There are lots of way to manage stress, such as:</h4>
+        <ul class="answer">
+            <li>* Exercise, any exercise will boost your mood and health.</li>
+            <li>* Find a relaxing activity that suits you, for me it's listening to jazz, what about you?</li>
+            <li>* Stay connected with the ones who can provide emotional support and help.</li>
+            <li>* Structure your life, like set goals and priorties.</li>
+            <li>* Further browse our website, we have games and resources for you to find support!</li>
+            <br>
+            <li>  If you are overwhelmed by stress, ask for help from a health professional.</li>
+        </ul>
+        <!-- <h4 class="answer">* Exercise, any exercise will boost your mood and health.</h4>
+        <h4 class="answer">* Find a relaxing activity that suits you, for me it's listening to jazz, what about you?</h4>
+        <h4 class="answer">* Stay connected with the ones who can provide emotional support and help.</h4>
+        <h4 class="answer">* Structure your life, like set goals and priorties.</h4>
+        <h4 class="answer">* Further browse our website, we have games and resources for you to find support!</h4>
+        <h4 class="answer">If you are overwhelmed by stress, ask for help from a health professional.</h4> -->
+
+
+
+
+        <button onclick="clickFunction()" id="myBtn">Show Answer</button>
+        <br>
+        <h3>Sources:</h3>
+        <a href="https://www.nimh.nih.gov/health/publications/stress">National Instiutte of Mental Health: 5 Things You Should Know About Stress </a>
+        <br>
+        <a href="https://www.webmd.com/balance/stress-management/stress-symptoms-effects_of-stress-on-the-body">WebMD: Stress Symptoms</a>
+
+
+        
+
+        <!-- <button class="False">False</button> -->
+
+        
+        
+        
+        <script>
+            var clicked=false;
+            function clickFunction(){
+                var answers = document.querySelectorAll(".answer");
+                console.log(answers.length);
+                var button=document.querySelector("button")
+
+                // toggle
+                if(!clicked){
+                    document.getElementById("myBtn").innerHTML="Hide answers";
+                    button.style.backgroundColor="red";
+                    clicked =true;
+                }
+                else{
+                    document.getElementById("myBtn").innerHTML = "Show answers";
+                    button.style.backgroundColor = "orange";
+                    clicked=false;
+                }
+                
+                
+                for (let i=0; i<answers.length;i++){
+                    console.log(answers[i].style.display);
+                    if (answers[i].style.display === "none" || answers[i].style.display === "") {
+                        
+                    answers[i].style.display = "block";
+                    } 
+                    else {
+                        answers[i].style.display = "none";
+                    }
+                }
+                // console.log("hello");
+                
+            }
+            
+        </script>
+
+    </section>
+    
 </body>
 </html>
