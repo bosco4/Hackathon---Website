@@ -16,7 +16,9 @@ body {
     background-color: var(--primary-color);
 }
 
-
+.item {
+    color: var(--secondary-color);
+}
 
 li a {
     padding: 10px;
@@ -48,6 +50,7 @@ ul {
 .logo {
     font-weight: 700;
     font-size: 40px;
+    color: var(--secondary-color);
 }
 
 .hero {
@@ -81,14 +84,14 @@ ul {
 
 }
 
-nav {
+/* nav {
     -webkit-backdrop-filter: blur(8px);
     backdrop-filter: blur(8px);
     /* position: fixed;
     top: 0;
     left: 0;
-    right: 0; */
-}
+    right: 0;
+} */
 
 
 /* ADDING TOGGLE FOR DARK MODE */
@@ -97,4 +100,5 @@ nav {
     background-color: var(--secondary-color);
     color: var(--primary-color);
 }
+
 
