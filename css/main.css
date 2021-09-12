@@ -41,7 +41,6 @@ ul {
     justify-content: space-between;
     padding-right: 10px;
     margin-top: 1rem;
-    
 }
 
 .logo {
@@ -63,7 +62,6 @@ ul {
   font-size: x-large;
 }
 
-
 * {
   padding-left: 1em;
   padding-right: 1em;
@@ -74,6 +72,6 @@ p {
 }
 
 .exercise-routines .title {
-  padding-top: 2em;
+  padding-top: 1em;
   font-size: x-large;
 }
