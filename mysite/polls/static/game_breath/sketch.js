@@ -31,7 +31,7 @@ function draw() {
 		bvel += 0.8 * speed_ratio / 100;
 	}
 	if (keyIsPressed) {
-		if (keyCode == 37) { // left
+		if (keyCode == 37 && speed_ratio > 6) { // left
 			speed_ratio -= change_speed_by;
 		}
 		if (keyCode == 39) { // right
@@ -51,5 +51,12 @@ function draw() {
 		current_size *= size_ratio / 100;
 		fill(250 - 10 * i, 200 - 10 * i, 150 - 10 * i, 150);
 		ellipse(x, y, current_size);
+	}
+}
+
+function keyPressed() {
+	print(keyCode)
+	if (keyCode == 82) {
+		setup();
 	}
 }
