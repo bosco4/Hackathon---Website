@@ -33,3 +33,7 @@ def questionnaire(request, *a):
 
 def physical_health(request, *a):
     return render(request, 'polls/physical_health.html', None)
+
+
+def sources(request, *a):
+    return render(request, 'polls/sources.html', None)

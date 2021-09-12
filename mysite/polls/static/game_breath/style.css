@@ -1,8 +1,77 @@
-html, body {
-  margin: 0;
-  padding: 0;
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap');
+
+.background{
+
+    background-color: #F7F8FC;
 }
 
-canvas {
-  display: block;
+
+body {
+    box-sizing: border-box;
+    width: 100%;
+    margin: auto;
+    font-family: Poppins, sans-serif;
+    font-weight: 500;
+}
+
+
+
+li a {
+    padding: 10px;
+    text-decoration: none;
+}
+
+.navbar{
+    list-style: none;
+}
+
+.navbar li {
+    display: inline-block;
+}
+
+ul {
+    list-style-type: none;
+    color: #1f1f1f;
+}
+
+.right-nav {
+    float: right;
+    display: flex;
+    justify-content: space-between;
+    padding-right: 10px;
+    margin-top: 1rem;
+}
+
+.logo {
+    font-weight: 700;
+    font-size: 40px;
+}
+
+.nutrition-calculator .calculator{
+  text-align: center;
+  background-color: burlywood;
+  margin-left: 13em;
+  margin-right: 13em;
+  padding-top: 2em;
+  padding-bottom: 2em;
+}
+
+.nutrition-calculator .title {
+  text-align: left;
+  font-size: x-large;
+}
+
+* {
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
+p {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.exercise-routines .title {
+  padding-top: 1em;
+  font-size: x-large;
 }

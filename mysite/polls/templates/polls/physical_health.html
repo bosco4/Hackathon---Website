@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 
 <html lang="en">
+{% load static %}
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/main.css">
-    <title>DeStresser</title>
-    <script src="https://unpkg.com/darken"></script>
-    <script>const darkmode = new darken();</script>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{% static 'physical_health/css/main.css' %}">
+  <title>DeStresser</title>
+  <script src="https://unpkg.com/darken"></script>
+  <script>const darkmode = new darken();</script>
 
 </head>
 
@@ -17,8 +19,7 @@
     Code:https://www.w3schools.com/css/css_form.asp 
     --->
 <style>
-  input[type=text] 
-  {
+  input[type=text] {
     width: 15%;
     padding: 12px 20px;
     margin: 8px 0;
@@ -28,8 +29,7 @@
     box-sizing: border-box;
   }
 
-  input[type=number] 
-  {
+  input[type=number] {
     width: 10%;
     padding: 12px 20px;
     margin: 8px 0;
@@ -39,13 +39,11 @@
     box-sizing: border-box;
   }
 
-  input[type=number]:focus 
-  {
+  input[type=number]:focus {
     border: 3px solid #555;
   }
 
-  input[type=button] 
-  {
+  input[type=button] {
     width: 30%;
     background-color: #000000;
     color: white;
@@ -55,221 +53,232 @@
     border-radius: 4px;
     cursor: pointer;
   }
-  
-  input[type=button]:hover 
-  {
+
+  input[type=button]:hover {
     background-color: #45a049;
   }
-
 </style>
 
 <body>
-    <!-- navbar -->
+  <!-- navbar -->
 
-    <header>
-     <nav class="menu">
-        <ul class="navbar">
-          <li><a class="logo" href="index.html">DeStresser</a></li>
-          <div class="right-nav">
-          <li class="item"><a href="index.html">Home</a></li>
-          <li class="item"><a href="#CHANGE">Physical Activities</a></li>
-          <li class="item"><a href="#CHANGE">Q&A</a></li>
-          <li class="item"><a href="#CHANGE">Game</a></li>
-          <li class="item"><a href="#CHANGE">Resources</a></li>
-          <button onclick="myFunction()">Toggle dark mode</button>
+  <header>
+    <nav class="menu">
+      <ul class="navbar">
+        <li><a class="logo" href="{% url 'index'%}">DeStresser</a></li>
+        <div class="right-nav">
+          <li class="item"><a href="{% url 'index'%}">Home</a></li>
+          <li class="item"><a href="{% url 'physical_health'%}">Physical Activities</a></li>
+          <li class="item"><a href="{% url 'questionnaire'%}">Q&A</a></li>
+          <li class="item"><a href="{% url 'game_breath'%}">Game</a></li>
+          <li class="item"><a href="{% url 'sources'%}">Resources</a></li>
           <!-- <label class="switch">
             <input type="checkbox" checked>
             <span class="slider round"></span>
           </label> -->
-          </div>
+        </div>
       </ul>
-      </nav>
-    </header>
+    </nav>
+  </header>
 
-      <section class="nutrition-calculator">
-        <div class="nutrition-body">
+  <section class="nutrition-calculator">
+    <div class="nutrition-body">
 
-          <p class="title">
-            Nutrition Calculator
-          </p>
+      <p class="title">
+        Nutrition Calculator
+      </p>
 
-          <p id="intro">
-            Daily physical activities lower stress throughout the day. Calculate your minimum nutritional needs to power your body for these activies.
-          </p>
+      <p id="intro">
+        Daily physical activities lower stress throughout the day. Calculate your minimum nutritional needs to power
+        your body for these activies.
+      </p>
 
-          <form class="calculator" name="calorieCalculator">
-            <p id="message">Min. Calories: ?</p>
+      <form class="calculator" name="calorieCalculator">
+        <p id="message">Min. Calories: ?</p>
 
-            <label for="ageInt">Age: </label>
-            <input type="number" id="ageInt" name="ageNumber" style="width: 15%;" placeholder="Your age.." min="18" max="100">
+        <label for="ageInt">Age: </label>
+        <input type="number" id="ageInt" name="ageNumber" style="width: 15%;" placeholder="Your age.." min="18"
+          max="100">
 
-            <label for="heightFt">Height: </label>
-            <input type="number" id="heightFt" name="heightFeet" style="width: 13%;" placeholder="Feet.." min="1" max="100">
-            <input type="number" id="heightIn" name="heightInches" style="width: 13%;" placeholder="Inches.." min="0" max="100">
+        <label for="heightFt">Height: </label>
+        <input type="number" id="heightFt" name="heightFeet" style="width: 13%;" placeholder="Feet.." min="1" max="100">
+        <input type="number" id="heightIn" name="heightInches" style="width: 13%;" placeholder="Inches.." min="0"
+          max="100">
 
-            <br>
+        <br>
 
-            <label for="weight">Weight: </label>
-            <input type="number" id="weightLbs" name="weightPounds" style="width: 15%;" placeholder="lb.." min="1" max="100">
+        <label for="weight">Weight: </label>
+        <input type="number" id="weightLbs" name="weightPounds" style="width: 15%;" placeholder="lb.." min="1"
+          max="100">
 
-            <label for="gender">Gender: </label>
-            <select name="gender" id="gender" style="width: 12%; height: 1cm;" >
-              <option value="Male">Male</option>
-              <option value="Female">Female</option>
-            </select>
+        <label for="gender">Gender: </label>
+        <select name="gender" id="gender" style="width: 12%; height: 1cm;">
+          <option value="Male">Male</option>
+          <option value="Female">Female</option>
+        </select>
 
-            </br>
+        </br>
 
-            <label for="activityRate">Daily exercise: </label>
-            <select name="activityR" id="activityRate" style="width: 21%; height: 1cm;">
-              <option value="1.2">Little to No Activity</option>
-              <option value="1.375">1-3 Days per week</option>
-              <option value="1.55">3-5 Days per week</option>
-              <option value="1.725">6-7 Days per week</option>
-              <option value="1.9">Hard Activity 6-7 Days per week</option>
-            </select>
+        <label for="activityRate">Daily exercise: </label>
+        <select name="activityR" id="activityRate" style="width: 21%; height: 1cm;">
+          <option value="1.2">Little to No Activity</option>
+          <option value="1.375">1-3 Days per week</option>
+          <option value="1.55">3-5 Days per week</option>
+          <option value="1.725">6-7 Days per week</option>
+          <option value="1.9">Hard Activity 6-7 Days per week</option>
+        </select>
 
-            <!---
+        <!---
               Source: Muhanad Hasan; youtube.com/channel/UC1xxTfHbYIFLzjqUIQbA7iQ
               Code: youtube.com/watch?v=20wxkO2gL78
               --->
-            <input type="button" value="Evaluate" onclick="calCalories()">
-            <script>
-              function calCalories()
-              {
-                var genderModifier;
-                var weightModifier;
-                var heightModifier;
-                var ageModifier;
+        <input type="button" value="Evaluate" onclick="calCalories()">
+        <script>
+          function calCalories() {
+            var genderModifier;
+            var weightModifier;
+            var heightModifier;
+            var ageModifier;
 
-                var BMR;
-                var result ="Empty Field Exists";
+            var BMR;
+            var result = "Empty Field Exists";
 
-                if(gender.value == "Female")
-                {
-                  genderModifier = 655.1;
-                  weightModifier = 9.563;
-                  heightModifier = 1.850;
-                  ageModifier = 4.676;
-                }else{
-                  genderModifier = 66.47;
-                  weightModifier = 13.75;
-                  heightModifier = 5.003;
-                  ageModifier = 6.775;
-                }
-                
-                if(weightLbs.value && heightFt.value && heightIn.value && ageInt.value){
-                  BMR = genderModifier + (weightModifier * weightLbs.value * 0.453592) + (heightModifier * ( (heightFt.value * 30.48) + (heightIn.value * 2.54) ) ) - (ageModifier * ageInt.value)
-                  result = "Min. Cal: " + Math.round(BMR * activityRate.value);
-                }
-                document.getElementById("message").innerHTML = result;
-              }
-            </script>
-          </form>
+            if (gender.value == "Female") {
+              genderModifier = 655.1;
+              weightModifier = 9.563;
+              heightModifier = 1.850;
+              ageModifier = 4.676;
+            } else {
+              genderModifier = 66.47;
+              weightModifier = 13.75;
+              heightModifier = 5.003;
+              ageModifier = 6.775;
+            }
 
-        </div>
+            if (weightLbs.value && heightFt.value && heightIn.value && ageInt.value) {
+              BMR = genderModifier + (weightModifier * weightLbs.value * 0.453592) + (heightModifier * ((heightFt.value * 30.48) + (heightIn.value * 2.54))) - (ageModifier * ageInt.value)
+              result = "Min. Cal: " + Math.round(BMR * activityRate.value);
+            }
+            document.getElementById("message").innerHTML = result;
+          }
+        </script>
+      </form>
 
-      </section>
+    </div>
 
-      <section class="exercise-routines">
-        <div class="exercise-body">
+  </section>
 
-          <p class="title">
-            Exercises to lower stress
-          </p>
+  <section class="exercise-routines">
+    <div class="exercise-body">
 
-          <p class="subtitle">
-            Physical exercise routines lower stress and increase moods throughout the day. Find below an index of exercises and how to do them.
-          </p>
-        
-          Training Exercises:
-        
-          <p>
-            Boxing is a great way to de-stress, it allows one to focus on lowering aggression built up in our daily lives. It also is a great way to get into cardio and muscle training.
-          </p>
-          
-          <p>
-            Basic Punch
-          </p>
+      <p class="title">
+        Exercises to lower stress
+      </p>
 
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/WksHh-SkzaM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <p class="subtitle">
+        Physical exercise routines lower stress and increase moods throughout the day. Find below an index of exercises
+        and how to do them.
+      </p>
 
-          <p>
-            Rope Work
-          </p>
+      Training Exercises:
 
-          <p>
-            A good way to build up cardio during a boxing session, and to keep your mind off aggressive thoughts.
-          </p>
+      <p>
+        Boxing is a great way to de-stress, it allows one to focus on lowering aggression built up in our daily lives.
+        It also is a great way to get into cardio and muscle training.
+      </p>
 
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/fLiozP7GVeA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <p>
+        Basic Punch
+      </p>
 
-          <!---
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/WksHh-SkzaM" title="YouTube video player"
+        frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen></iframe>
+
+      <p>
+        Rope Work
+      </p>
+
+      <p>
+        A good way to build up cardio during a boxing session, and to keep your mind off aggressive thoughts.
+      </p>
+
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/fLiozP7GVeA" title="YouTube video player"
+        frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen></iframe>
+
+      <!---
             Source: https://wtop.com/
             Info: https://wtop.com/news/2020/08/top-upper-body-workouts/
             --->
-          <br></br>
-            Gym Exercises:
+      <br></br>
+      Gym Exercises:
 
-          <p id="upperBody">
-            There are multiple areas that comprise upper body exercise, these areas includ the; Neck, Shoulders, Back, Arms, and Forearms. 
-            Each exercise below will involve one or more of these areas when properly done.
-          </p>
+      <p id="upperBody">
+        There are multiple areas that comprise upper body exercise, these areas includ the; Neck, Shoulders, Back, Arms,
+        and Forearms.
+        Each exercise below will involve one or more of these areas when properly done.
+      </p>
 
-          <p id="chest">
-            Bench Press
-          </p>
+      <p id="chest">
+        Bench Press
+      </p>
 
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/rT7DgCr-3pg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/rT7DgCr-3pg" title="YouTube video player"
+        frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen></iframe>
 
-          <p id="chestMistakes" >
-            There are also possible mistakes you can do when attempting this activity. Watch the video below to avoid such mistakes, as they can cause
-            unecessary pain, future and current possible injuries, and lastly working out the wrong muscle groups.
-          </p>
+      <p id="chestMistakes">
+        There are also possible mistakes you can do when attempting this activity. Watch the video below to avoid such
+        mistakes, as they can cause
+        unecessary pain, future and current possible injuries, and lastly working out the wrong muscle groups.
+      </p>
 
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/vthMCtgVtFw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/vthMCtgVtFw" title="YouTube video player"
+        frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen></iframe>
 
-        </div>
-      </section>
+    </div>
+  </section>
 
 </body>
 
 <script>
-  var clicked=false;
+  var clicked = false;
   function myFunction() {
     var text = document.getElementsByClassName("item");
-   var div = document.body;
+    var div = document.body;
     // dark mode for body
-   div.classList.toggle("dark-mode");
+    div.classList.toggle("dark-mode");
 
-  //  dark mode for navabr
+    //  dark mode for navabr
 
-  var nav=document.querySelector('.navbar');
-  console.log(nav);
+    var nav = document.querySelector('.navbar');
+    console.log(nav);
 
 
-  var li=nav.getElementsByTagName("li");
-  console.log(li);
-  var a = nav.getElementsByTagName("a");
-  console.log(a[0]);
-  for(i=0;i<a.length;i++){
-    if(!clicked){
-      a[i].classList.add("dark-mode");
+    var li = nav.getElementsByTagName("li");
+    console.log(li);
+    var a = nav.getElementsByTagName("a");
+    console.log(a[0]);
+    for (i = 0; i < a.length; i++) {
+      if (!clicked) {
+        a[i].classList.add("dark-mode");
+      }
+      else {
+        // li.style.color="white";
+        a[i].classList.remove("dark-mode");
+      }
+
     }
-    else{
-      // li.style.color="white";
-      a[i].classList.remove("dark-mode");
-    }
-    
-  }
-  
-  // var a=li.getElementsByClassName("item");
-  // console.log(a);
-  
-  // var a=li.getElementById("a"); 
-  // console.log(a);
-  // a.classList.add("dark-mode")
-   
+
+    // var a=li.getElementsByClassName("item");
+    // console.log(a);
+
+    // var a=li.getElementById("a"); 
+    // console.log(a);
+    // a.classList.add("dark-mode")
+
   }
 </script>
 

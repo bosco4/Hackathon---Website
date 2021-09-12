@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+{% load static %}
 
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="{% static 'web_a/css/main.css' %}">
   <title>DeStresser</title>
   <script src="https://unpkg.com/darken"></script>
   <script>const darkmode = new darken();</script>
@@ -17,13 +18,13 @@
   <header>
     <nav class="menu">
       <ul class="navbar">
-        <li><a class="logo" href="index.html">DeStresser</a></li>
+        <li><a class="logo" href="{% url 'index'%}">DeStresser</a></li>
         <div class="right-nav">
-          <li class="item"><a href="index.html">Home</a></li>
-          <li class="item"><a href="#CHANGE">Physical Activities</a></li>
-          <li class="item"><a href="#CHANGE">Q&A</a></li>
-          <li class="item"><a href="#CHANGE">Game</a></li>
-          <li class="item"><a href="#CHANGE">Resources</a></li>
+          <li class="item"><a href="{% url 'index'%}">Home</a></li>
+          <li class="item"><a href="{% url 'physical_health'%}">Physical Activities</a></li>
+          <li class="item"><a href="{% url 'questionnaire'%}">Q&A</a></li>
+          <li class="item"><a href="{% url 'game_breath'%}">Game</a></li>
+          <li class="item"><a href="{% url 'sources'%}">Resources</a></li>
           <!-- <label class="switch">
             <input type="checkbox" checked>
             <span class="slider round"></span>

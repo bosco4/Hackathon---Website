@@ -20,4 +20,6 @@ urlpatterns = [
 
     path('physical_health/', views.physical_health, name='physical_health'),
 
+    path('sources/', views.sources, name='sources'),
+
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
