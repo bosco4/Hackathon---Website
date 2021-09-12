@@ -133,6 +133,7 @@
                 var ageModifier;
 
                 var BMR;
+                var result ="Empty Field Exists";
 
                 if(gender.value == "Female")
                 {
@@ -146,9 +147,14 @@
                   heightModifier = 5.003;
                   ageModifier = 6.775;
                 }
+                
+                if(weightLbs.value && heightFt.value && heightIn.value && ageInt.value){
+                  BMR = genderModifier + (weightModifier * weightLbs.value * 0.453592) + (heightModifier * ( (heightFt.value * 30.48) + (heightIn.value * 2.54) ) ) - (ageModifier * ageInt.value)
+                  result = "Min. Cal: " + Math.round(BMR * activityRate.value);
+                }else{
 
-                BMR = genderModifier + (weightModifier * weightLbs.value * 0.453592) + (heightModifier * ( (heightFt.value * 30.48) + (heightIn.value * 2.54) ) ) - (ageModifier * ageInt.value)
-                document.getElementById("message").innerHTML = "Min. Cal: " + Math.round(BMR * activityRate.value);
+                }
+                document.getElementById("message").innerHTML = result;
               }
             </script>
             </br>
