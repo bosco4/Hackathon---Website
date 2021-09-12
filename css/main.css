@@ -1,7 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap");
 
+:root {
+  --primary-color: white;
+  --secondary-color: #1f1f1f;
+}
+
 .background {
-  background-color: #f7f8fc;
+  background-color: white;
 }
 
 body {
@@ -10,6 +15,7 @@ body {
   margin: auto;
   font-family: Poppins, sans-serif;
   font-weight: 500;
+  background-color: var(--primary-color);
 }
 
 li a {
@@ -27,7 +33,7 @@ li a {
 
 ul {
   list-style-type: none;
-  color: #1f1f1f;
+  color: var(--secondary-color);
 }
 
 .right-nav {
@@ -54,7 +60,7 @@ ul {
 .TF h4 {
   padding-left: 3em;
   display: none;
-  color: gray;
+  color: #808080;
 }
 
 .TF ul {
@@ -71,9 +77,6 @@ ul {
 
 .TF a {
   padding-left: 2.5em;
-}
-
-.TF h6 {
 }
 
 #myBtn {
@@ -93,4 +96,13 @@ ul {
   font-size: 10px; /* Increase font size */
   margin-right: 5em;
   text-align: center;
+}
+
+/* Source page */
+.sources h2 {
+  padding-left: 1em;
+}
+
+.sources li {
+  padding-left: 1em;
 }
